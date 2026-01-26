@@ -1,0 +1,17 @@
+[
+  {
+    "id": "mode-1769175544588",
+    "name": "Car GPS tracker",
+    "smartName": "tracker",
+    "originalPrompt": "Detects where I parked and collects the data\nso i will get in the app where there is usually parking at this time of day. \nit will also alert me if the car is going without my  phone \nuse LoRa and deep sleep and RSSI to know when to send me signals\n",
+    "version": 2,
+    "status": "active",
+    "createdAt": "2026-01-23T13:39:04.588Z",
+    "lastModified": "2026-01-23T19:55:23.120Z",
+    "cppFile": "generated_modules/tracker_module.h",
+    "widgetFile": "generated_widgets/tracker_view.jsx",
+    "activationCount": 6,
+    "tags": [],
+    "lastActivated": "2026-01-23T20:03:48.117Z"
+  }
+]

@@ -1,0 +1,253 @@
+[
+  {
+    "id": "gps-cyclist",
+    "name": "GPS Cyclist",
+    "description": "Track your cycling routes, speed, distance, and elevation. Perfect for training rides or exploring new trails.",
+    "icon": "🚴",
+    "category": "fitness",
+    "sensors": [
+      "GPS",
+      "IMU"
+    ],
+    "verified": true,
+    "featured": true,
+    "downloads": 2,
+    "rating": 4.9,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "speed",
+      "distance",
+      "elevation",
+      "latitude",
+      "longitude",
+      "sensorValue"
+    ],
+    "smartName": "cyclist"
+  },
+  {
+    "id": "running-tracker",
+    "name": "Running Tracker",
+    "description": "Monitor pace, distance, and routes. Track your progress mile by mile.",
+    "icon": "🏃",
+    "category": "fitness",
+    "sensors": [
+      "GPS",
+      "IMU"
+    ],
+    "verified": true,
+    "featured": true,
+    "downloads": 1,
+    "rating": 4.8,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "pace",
+      "distance",
+      "latitude",
+      "longitude",
+      "sensorValue"
+    ],
+    "smartName": "runner"
+  },
+  {
+    "id": "guitar-tuner",
+    "name": "Guitar Tuner",
+    "description": "Standard tuning detection with visual feedback. Includes practice session timer.",
+    "icon": "🎸",
+    "category": "music",
+    "sensors": [
+      "Microphone",
+      "IMU"
+    ],
+    "verified": true,
+    "featured": true,
+    "downloads": 0,
+    "rating": 4.7,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "frequency",
+      "note",
+      "cents",
+      "sensorValue"
+    ],
+    "smartName": "tuner"
+  },
+  {
+    "id": "plant-monitor",
+    "name": "Plant Monitor",
+    "description": "Track environmental conditions for your plants. Get watering reminders based on patterns.",
+    "icon": "🌱",
+    "category": "home",
+    "sensors": [
+      "Temperature",
+      "IMU"
+    ],
+    "verified": true,
+    "featured": false,
+    "downloads": 0,
+    "rating": 4.6,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "temperature",
+      "humidity",
+      "sensorValue"
+    ],
+    "smartName": "plant"
+  },
+  {
+    "id": "door-sensor",
+    "name": "Door Sensor",
+    "description": "Get instant alerts when doors or windows open. Perfect for home security.",
+    "icon": "🚪",
+    "category": "security",
+    "sensors": [
+      "IMU"
+    ],
+    "verified": true,
+    "featured": false,
+    "downloads": 0,
+    "rating": 4.5,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "state",
+      "lastOpened",
+      "sensorValue"
+    ],
+    "smartName": "door"
+  },
+  {
+    "id": "bike-security",
+    "name": "Bike Security",
+    "description": "Motion alarm with GPS tracking. Get notified if your bike moves unexpectedly.",
+    "icon": "🔒",
+    "category": "security",
+    "sensors": [
+      "GPS",
+      "IMU"
+    ],
+    "verified": true,
+    "featured": true,
+    "downloads": 0,
+    "rating": 4.9,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "armed",
+      "latitude",
+      "longitude",
+      "motion",
+      "sensorValue"
+    ],
+    "smartName": "tracker"
+  },
+  {
+    "id": "sleep-tracker",
+    "name": "Sleep Tracker",
+    "description": "Analyze movement patterns during sleep. Track sleep quality and duration.",
+    "icon": "😴",
+    "category": "fitness",
+    "sensors": [
+      "IMU"
+    ],
+    "verified": true,
+    "featured": false,
+    "downloads": 0,
+    "rating": 4.4,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "sleepQuality",
+      "duration",
+      "movements",
+      "sensorValue"
+    ],
+    "smartName": "sleep"
+  },
+  {
+    "id": "pet-activity",
+    "name": "Pet Activity",
+    "description": "Track your pet's movement and activity levels. See daily exercise patterns.",
+    "icon": "🐕",
+    "category": "hobby",
+    "sensors": [
+      "IMU",
+      "GPS"
+    ],
+    "verified": true,
+    "featured": false,
+    "downloads": 0,
+    "rating": 4.7,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "activity",
+      "distance",
+      "sensorValue"
+    ],
+    "smartName": "pet"
+  },
+  {
+    "id": "parking-finder",
+    "name": "Parking Finder",
+    "description": "Save your parking location with one tap. Navigate back to your car easily.",
+    "icon": "🅿️",
+    "category": "hobby",
+    "sensors": [
+      "GPS"
+    ],
+    "verified": true,
+    "featured": false,
+    "downloads": 0,
+    "rating": 4.6,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "latitude",
+      "longitude",
+      "savedAt",
+      "sensorValue"
+    ],
+    "smartName": "parking"
+  },
+  {
+    "id": "climate-monitor",
+    "name": "Climate Monitor",
+    "description": "Monitor temperature and environmental conditions. Get comfort level alerts.",
+    "icon": "🌡️",
+    "category": "home",
+    "sensors": [
+      "Temperature"
+    ],
+    "verified": true,
+    "featured": false,
+    "downloads": 1,
+    "rating": 4.5,
+    "createdAt": "2026-01-23T12:00:00Z",
+    "dataFields": [
+      "temperature",
+      "comfort",
+      "sensorValue"
+    ],
+    "smartName": "weather"
+  },
+  {
+    "id": "alarm-clock",
+    "name": "Alarm Clock",
+    "description": "Wake up to customizable alarms with your choice of sounds. Set time, repeat schedule, and smart snooze features.",
+    "icon": "⏰",
+    "category": "home",
+    "sensors": [
+      "RTC",
+      "Buzzer",
+      "IMU"
+    ],
+    "verified": true,
+    "featured": true,
+    "downloads": 0,
+    "rating": 4.8,
+    "createdAt": "2026-01-23T15:00:00Z",
+    "dataFields": [
+      "currentTime",
+      "alarmTime",
+      "alarmEnabled",
+      "snoozeCount",
+      "sensorValue"
+    ],
+    "smartName": "alarm"
+  }
+]
