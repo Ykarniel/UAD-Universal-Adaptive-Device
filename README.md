@@ -7,7 +7,7 @@
 
 # 📱 Universal Adaptive Device (UAD)
 
-A **universal hardware platform** that redefines itself through an AI-powered "Hardware App Store." 
+A **universal hardware ecosystem** that redefines itself through an AI-powered "Hardware App Store" and real-time firmware synthesis.
 
 ---
 
@@ -17,13 +17,14 @@ Traditional IoT devices are fixed in their purpose. **UAD** is the "Smartphone o
 
 ---
 
-## 🚀 Key Innovation: The Hardware App Store
+## 🚀 Key Innovation: AI Firmware Synthesis & "OTA Hot-Swapping"
 
-UAD moves away from static, hard-coded devices. Through the mobile companion app, users browse a library of "Hardware Apps":
-1. **Choose**: Select an application from the UAD Store (e.g., Guitar, Bicycle, Smart Door).
-2. **AI-Synthesis**: Gemini AI analyzes the chosen context and generates optimized C++ firmware modules and React dashboard widgets.
-3. **Deploy**: The custom-built firmware is pushed instantly over-the-air (OTA) via Bluetooth Low Energy (BLE).
-4. **Transform**: The device reboots, and your universal hardware is now a specialized tool with a custom UI.
+UAD moves away from static, hard-coded devices. Through the mobile companion app, users can browse a library of modes or simply describe a new use case in natural language:
+
+1. **Choose or Describe**: Select an application from the UAD Store or type a custom prompt (e.g., "Make me a gym rep counter").
+2. **AI-Synthesis**: Gemini AI analyzes the requirement and generates optimized C++ firmware modules and React dashboard widgets.
+3. **OTA Hot-Swapping**: The modular ESP32-S3 architecture supports switching functional capabilities on-the-fly. The custom-built firmware is pushed instantly over-the-air (OTA) via Bluetooth Low Energy (BLE).
+4. **Context Awareness**: Integrated **TinyML** allows the device to further adapt its behavior based on real-time environmental data.
 
 ---
 
@@ -31,7 +32,7 @@ UAD moves away from static, hard-coded devices. Through the mobile companion app
 
 ```text
 .
-├── src/                # ESP32-S3 Firmware (FSM, BLE, Sensors)
+├── src/                # ESP32-S3 Firmware (FSM, BLE, Sensors, TinyML)
 ├── include/            # Hardware configuration and shared types
 ├── backend/            # AI Compilation Service (Gemini + GCC-Cross)
 ├── dashboard/          # Adaptive Mobile App (React + Capacitor)
@@ -43,11 +44,11 @@ UAD moves away from static, hard-coded devices. Through the mobile companion app
 
 ## ✨ Features
 
-- ✅ **On-Demand Transformation**: Instantly switch device purpose via software.
-- ✅ **AI Self-Coding**: Backend automatically writes and compiles C++ modules + React widgets based on your needs.
+- ✅ **Natural Language Reconfiguration**: Describe a job, and the AI writes the code.
+- ✅ **AI Self-Coding**: Backend automatically synthesizes and compiles C++ modules + React widgets.
+- ✅ **OTA Hot-Swapping**: Switch operational modes without manual cable flashing.
+- ✅ **TinyML Integration**: Real-time on-device sensor fusion and pattern recognition.
 - ✅ **BLE Internet Proxy**: Uses your phone's connection—no local WiFi required for cloud updates.
-- ✅ **Dynamic Dashboards**: Mobile UI automatically adapts to show the relevant telemetry for your selected app.
-- ✅ **Power Efficient**: Optimized BLE stack and deep-sleep modes for long-term battery use.
 - ✅ **Mesh Ready**: Integrated LoRa support for device-to-device alerts (e.g., security or location tracking).
 
 ---
@@ -82,7 +83,7 @@ pio device monitor
 ## 🎮 Using UAD
 
 ### Step 1: Browse the Store
-- Open the UAD companion app and pick the mode you need: Guitar, Bike, Door, Dog, Drill, etc.
+- Open the UAD companion app and pick a mode: Guitar, Bike, Door, Dog, Drill, etc. Or describe your own!
 
 ### Step 2: Connect
 - Tap "📡 Connect to UAD" to pair with your hardware via Bluetooth.
@@ -91,7 +92,7 @@ pio device monitor
 - The backend uses Gemini to generate the specific logic for your selected mode.
 
 ### Step 4: OTA Update
-- Your phone downloads the newly synthesized firmware and sends it to the UAD device.
+- Your phone downloads the newly synthesized firmware and sends it to the UAD device via BLE.
 
 ### Step 5: Specialized Hardware
 - The device reboots and the dashboard loads your custom widgets. You now have a specialized device tailored to your specific task!
@@ -107,19 +108,12 @@ pio device monitor
 - ⏱️ Practice time logger
 - 💯 Technique quality score
 
-### Pick "Coffee Machine Mode"
-**UAD transforms into a machine health monitor:**
-- ☕ Brew cycle counter
-- 📈 Pump health monitor (vibration analysis)
-- ⏰ Usage pattern tracker
-- 🌡️ Temperature optimizer
-
-### Pick "Security Mode"
-**UAD transforms into a smart motion alert system:**
-- 🔔 Movement/Tamper alerts
-- 🌡️ Room temperature tracker
-- 📊 Activity logs
-- 📡 LoRa-based backup alerts
+### Pick "Gym Mode" (Generated via Prompt)
+**UAD transforms into a fitness tracker:**
+- 🏋️ Dumbbell rep counter (using IMU data)
+- 📈 Set-by-set intensity analysis
+- 🔥 Calorie burn estimation
+- ⏱️ Rest time management
 
 ---
 
@@ -137,70 +131,12 @@ pio device monitor
 
 ---
 
-## 📱 Mobile App Features
-
-### UAD App Store
-- Select and install hardware "apps" on the fly.
-- Auto-generated widgets based on the selected mode.
-- Real-time telemetry charts.
-
-### Control Panel
-- 📡 Device connection (BLE scan).
-- 🤖 Force manual reconfiguration.
-- ✨ **Self-Recoding**: Describe a custom use case, and the AI generates the code for you.
-- ℹ️ Device info (battery, signal, status).
-
----
-
 ## 🔋 Power Efficiency
 
 **BLE vs WiFi:**
 - Idle: 15mA vs 80mA (81% savings)
 - Active: 45mA vs 150mA (70% savings)
 - Battery life: ~3x longer than typical WiFi IoT devices.
-
----
-
-## 🌐 Communication Architecture
-
-```
-UAD Device ←→ BLE ←→ Phone ←→ Internet ←→ Backend (Gemini AI)
-     ↕
-   LoRa Mesh (UAD-to-UAD only)
-     ↕
-Other UAD Devices
-```
-
-**BLE**: Phone connection, internet proxy  
-**LoRa**: Device-to-device mesh (emergency alerts, location tracking)
-
----
-
-## 🎯 Key Innovation
-
-### Not This:
-```
-❌ Static Hardware: One device, one job.
-❌ Fixed Features: Updates limited to what the developer imagined first.
-```
-
-### But This:
-```
-✅ Universal Hardware: One device, infinite jobs.
-✅ On-Demand Reconfiguration: You decide what it is today.
-✅ AI-Powered Customization: Code generated specifically for your choice.
-```
-
----
-
-## 📊 What Makes UAD Unique
-
-1. **Universal Sensor Platform** - One device, any use case.
-2. **The App Store for Hardware** - Redefine your device in seconds.
-3. **AI-Powered Self-Coding** - Gemini writes your firmware on the fly.
-4. **Phone as Internet Gateway** - No configuration needed for complex WiFi.
-5. **Dynamic UI Generation** - Your dashboard changes with your device.
-6. **OTA Everything** - Entirely new firmware versions delivered in moments.
 
 ---
 
@@ -215,7 +151,7 @@ Other UAD Devices
 ## 🎉 You Built This
 
 A **modular, AI-powered, universal hardware ecosystem** that:
-- Transforms based on your choice 🛠️
+- Transforms based on your prompt 🛠️
 - Accesses a library of hardware apps 🏬
 - Writes its own code via AI 🤖
 - Generates custom UI 🎨
