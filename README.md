@@ -7,23 +7,23 @@
 
 # 📱 Universal Adaptive Device (UAD)
 
-A **fully self-adaptive IoT platform** that leverages AI to learn its environment and write its own firmware. 
+A **universal hardware platform** that redefines itself through an AI-powered "Hardware App Store." 
 
 ---
 
 ## 🎉 The Vision
 
-Traditional IoT devices are purpose-built for one task. **UAD** breaks this mold by being a "blank slate" that adapts to whatever you attach it to. Using on-device sensor pattern analysis and cloud-based AI, it discovers its own purpose and reconfigures itself in real-time.
+Traditional IoT devices are fixed in their purpose. **UAD** is the "Smartphone of IoT"—a single, high-performance hardware unit that can transform into any device you need. Whether you need a high-precision guitar tuner today or a bike security system tomorrow, UAD reconfigures its entire firmware and user interface to match your choice.
 
 ---
 
-## 🚀 Key Innovation: "The Oh, It Just Knew!" Experience
+## 🚀 Key Innovation: The Hardware App Store
 
-Instead of manually selecting a "Bike Mode," you simply attach UAD to your bike.
-1. **Analyze**: UAD samples IMU, sound, and environmental data.
-2. **Discover**: It identifies unique rhythmic patterns and frequencies.
-3. **Adapt**: Gemini AI recognizes the "context" (e.g., a bicycle) and generates custom C++ logic and mobile UI widgets.
-4. **Deploy**: The new firmware is pushed OTA via your phone's BLE connection.
+UAD moves away from static, hard-coded devices. Through the mobile companion app, users browse a library of "Hardware Apps":
+1. **Choose**: Select an application from the UAD Store (e.g., Guitar, Bicycle, Smart Door).
+2. **AI-Synthesis**: Gemini AI analyzes the chosen context and generates optimized C++ firmware modules and React dashboard widgets.
+3. **Deploy**: The custom-built firmware is pushed instantly over-the-air (OTA) via Bluetooth Low Energy (BLE).
+4. **Transform**: The device reboots, and your universal hardware is now a specialized tool with a custom UI.
 
 ---
 
@@ -43,12 +43,12 @@ Instead of manually selecting a "Bike Mode," you simply attach UAD to your bike.
 
 ## ✨ Features
 
-- ✅ **Context Discovery**: Auto-identifies patterns (Guitar, Bike, Door, Dog, Drill, etc.).
-- ✅ **AI Self-Coding**: Generates real-time C++ modules + React widgets.
-- ✅ **BLE Internet Proxy**: Uses your phone's connection—no local WiFi required.
-- ✅ **Dynamic Dashboards**: UI automatically adapts to show relevant telemetry.
-- ✅ **Power Efficient**: Optimized BLE stack and deep-sleep modes.
-- ✅ **Mesh Ready**: Integrated LoRa support for device-to-device alerts.
+- ✅ **On-Demand Transformation**: Instantly switch device purpose via software.
+- ✅ **AI Self-Coding**: Backend automatically writes and compiles C++ modules + React widgets based on your needs.
+- ✅ **BLE Internet Proxy**: Uses your phone's connection—no local WiFi required for cloud updates.
+- ✅ **Dynamic Dashboards**: Mobile UI automatically adapts to show the relevant telemetry for your selected app.
+- ✅ **Power Efficient**: Optimized BLE stack and deep-sleep modes for long-term battery use.
+- ✅ **Mesh Ready**: Integrated LoRa support for device-to-device alerts (e.g., security or location tracking).
 
 ---
 
@@ -56,7 +56,7 @@ Instead of manually selecting a "Bike Mode," you simply attach UAD to your bike.
 
 ### 1. Build Mobile App
 ```bash
-cd c:/Dev/UAD/dashboard
+cd dashboard
 npm install
 npm run build
 npx cap add android
@@ -65,85 +65,61 @@ npm run android  # Opens Android Studio
 
 ### 2. Start Backend
 ```bash
-cd c:/Dev/UAD/backend
+cd backend
 npm install
 # Edit .env with Gemini API key
 npm start
 ```
 
-### 3. Flash Firmware (Optional - OTA preferred)
+### 3. Flash Firmware (Initial setup)
 ```bash
-cd c:/Dev/UAD
 pio run -e uad_main -t upload
 pio device monitor
-```
-
-### 4. Test
-```bash
-cd dashboard
-npm test  # Run sensor classification tests
 ```
 
 ---
 
 ## 🎮 Using UAD
 
-### Step 1: Attach to Anything
-- Guitar, bike, door, dog collar, drill, plant pot, baby crib...
-- UAD starts analyzing immediately
+### Step 1: Browse the Store
+- Open the UAD companion app and pick the mode you need: Guitar, Bike, Door, Dog, Drill, etc.
 
-### Step 2: Open Mobile App
-- Tap "📡 Connect to UAD"
-- Phone scans and connects via Bluetooth
+### Step 2: Connect
+- Tap "📡 Connect to UAD" to pair with your hardware via Bluetooth.
 
-### Step 3: Auto-Discovery
-- UAD samples sensors for 30 seconds
-- Analyzes patterns (rhythm, frequency, impacts, temperature)
-- Sends to Gemini AI via phone's internet
+### Step 3: AI Generation
+- The backend uses Gemini to generate the specific logic for your selected mode.
 
-### Step 4: AI Generates Features
-- Gemini analyzes: "This is a [guitar/bike/door/etc.]"
-- Auto-generates telemetry fields
-- Auto-generates React widgets
-- Compiles C++ module
+### Step 4: OTA Update
+- Your phone downloads the newly synthesized firmware and sends it to the UAD device.
 
-### Step 5: OTA Update
-- Phone downloads compiled firmware
-- Sends to UAD via Bluetooth
-- Device reboots with new features
-
-### Step 6: Custom Dashboard
-- Dashboard loads AI-generated widgets
-- Shows real-time telemetry for your specific use case
-- Updates continuously as UAD learns more
+### Step 5: Specialized Hardware
+- The device reboots and the dashboard loads your custom widgets. You now have a specialized device tailored to your specific task!
 
 ---
 
 ## 💡 Example Scenarios
 
-### Attach to Guitar
-**UAD discovers:** 220Hz vibration, harmonic overtones  
-**Auto-generates:**
+### Pick "Guitar Mode"
+**UAD transforms into a high-precision musical tool:**
 - 🎵 Note frequency tracker
 - 🎯 Tuning accuracy meter (±0.1 cents)
 - ⏱️ Practice time logger
 - 💯 Technique quality score
 
-### Attach to Coffee Machine
-**UAD discovers:** Motor vibration, temperature spikes, daily pattern  
-**Auto-generates:**
+### Pick "Coffee Machine Mode"
+**UAD transforms into a machine health monitor:**
 - ☕ Brew cycle counter
-- 📈 Pump health monitor
+- 📈 Pump health monitor (vibration analysis)
 - ⏰ Usage pattern tracker
 - 🌡️ Temperature optimizer
 
-### Attach to Baby Crib
-**UAD discovers:** Gentle rhythmic motion, temperature changes  
-**Auto-generates:**
-- 😴 Sleep quality monitor
+### Pick "Security Mode"
+**UAD transforms into a smart motion alert system:**
+- 🔔 Movement/Tamper alerts
 - 🌡️ Room temperature tracker
-- 🔔 Movement alerts
-- 📊 Sleep pattern analysis
+- 📊 Activity logs
+- 📡 LoRa-based backup alerts
 
 ---
 
@@ -163,18 +139,16 @@ npm test  # Run sensor classification tests
 
 ## 📱 Mobile App Features
 
-### Dashboard Tab
-- Auto-generated widgets based on discovered features
-- Adaptive theme (changes color based on usage)
-- Real-time telemetry charts
-- Battery & connection status
+### UAD App Store
+- Select and install hardware "apps" on the fly.
+- Auto-generated widgets based on the selected mode.
+- Real-time telemetry charts.
 
-### Control Panel Tab
-- 📡 Device connection (BLE scan)
-- 🤖 Force AI analysis
-- 🎯 Sensor calibration
-- ✨ **Self-Recoding**: Type what you attached it to, AI generates code
-- ℹ️ Device info (battery, signal, status)
+### Control Panel
+- 📡 Device connection (BLE scan).
+- 🤖 Force manual reconfiguration.
+- ✨ **Self-Recoding**: Describe a custom use case, and the AI generates the code for you.
+- ℹ️ Device info (battery, signal, status).
 
 ---
 
@@ -183,11 +157,7 @@ npm test  # Run sensor classification tests
 **BLE vs WiFi:**
 - Idle: 15mA vs 80mA (81% savings)
 - Active: 45mA vs 150mA (70% savings)
-- Battery life: ~3x longer!
-
-**Deep Sleep:**
-- Sleep mode: 5mA
-- Wake on: motion, timer, button, LoRa message
+- Battery life: ~3x longer than typical WiFi IoT devices.
 
 ---
 
@@ -210,50 +180,33 @@ Other UAD Devices
 
 ### Not This:
 ```
-❌ User: "This is a helmet"
-❌ Device: [Loads helmet mode]
-❌ Fixed features for helmets only
+❌ Static Hardware: One device, one job.
+❌ Fixed Features: Updates limited to what the developer imagined first.
 ```
 
 ### But This:
 ```
-✅ User: [Attaches to anything]
-✅ Device: [Analyzes patterns silently]
-✅ Device: "Interesting vibration at 220Hz..."
-✅ AI: "This is a guitar! Generating tuner module..."
-✅ Device: [Auto-installs guitar features]
-✅ User: "Wow, it just knew!" 🤯
+✅ Universal Hardware: One device, infinite jobs.
+✅ On-Demand Reconfiguration: You decide what it is today.
+✅ AI-Powered Customization: Code generated specifically for your choice.
 ```
 
 ---
 
 ## 📊 What Makes UAD Unique
 
-1. **Universal Sensor Platform** - One device, any use case
-2. **AI-Powered Self-Coding** - Writes its own firmware
-3. **Phone as Internet Gateway** - No WiFi needed
-4. **Autonomous Feature Discovery** - Learns what's useful
-5. **Dynamic Widget Generation** - UI adapts to context
-6. **LoRa Mesh Networking** - Device-to-device communication
-7. **OTA Everything** - Firmware + widgets update remotely
-
----
-
-## 🚧 Future Enhancements
-
-- [ ] TinyML on-device inference (offline AI)
-- [ ] Multi-sensor fusion (IMU + GPS + Mic + Light)
-- [ ] Voice commands ("Hey UAD, what am I attached to?")
-- [ ] Community module marketplace
-- [ ] Cross-device learning (all UADs share patterns)
-- [ ] Predictive maintenance
+1. **Universal Sensor Platform** - One device, any use case.
+2. **The App Store for Hardware** - Redefine your device in seconds.
+3. **AI-Powered Self-Coding** - Gemini writes your firmware on the fly.
+4. **Phone as Internet Gateway** - No configuration needed for complex WiFi.
+5. **Dynamic UI Generation** - Your dashboard changes with your device.
+6. **OTA Everything** - Entirely new firmware versions delivered in moments.
 
 ---
 
 ## 📚 Documentation
 
 - **[Architecture Summary](docs/FINAL_ARCHITECTURE.md)** - Complete architecture overview
-- **[Feature Discovery Guide](docs/AUTONOMOUS_FEATURES.md)** - How feature discovery works
 - **[Mobile Build Guide](docs/ANDROID_BUILD.md)** - Build mobile app
 - **[Testing Scenarios](docs/TESTING_GUIDE.md)** - All test scenarios
 
@@ -261,14 +214,11 @@ Other UAD Devices
 
 ## 🎉 You Built This
 
-A **self-adapting, AI-powered, universal IoT platform** that:
-- Attaches to anything 📎
-- Discovers patterns 🔍
-- Writes its own code 🤖
+A **modular, AI-powered, universal hardware ecosystem** that:
+- Transforms based on your choice 🛠️
+- Accesses a library of hardware apps 🏬
+- Writes its own code via AI 🤖
 - Generates custom UI 🎨
 - Updates wirelessly 📡
-- Learns continuously 🧠
 
-**Just attach it. It figures out the rest.** ✨
-
-Ready to test! 🚀
+**Choose your app. UAD does the rest.** ✨
